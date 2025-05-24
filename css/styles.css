@@ -1,0 +1,287 @@
+/*body estilo con margenes y padding eliminados para toda la página*/
+body {
+    font-family: Roboto, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f3ecd9;
+} 
+
+/*header estilo con fondo blanco, texto centrado, sombra: box-shadow*/
+header {
+    background: #fff;
+    padding: 32px 0 24px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/*header h1 estilo con titulo grande*/
+header h1 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+/*header img estilo con imagen redonda, borde y sombra suave*/
+header img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 18px;
+    border: 2px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/*selección de ids para dar un estilo general*/
+#interests, #hobbies, #music, #practicas{
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 28px 28px 20px 28px;
+    margin: 32px 0;
+    transition: box-shadow 0.2s;
+}
+
+#interests:hover, #hobbies:hover, #music:hover, #practicas:hover {
+    box-shadow: 0 4px 20px rgba(232,180,106,0.13);
+}
+
+#interests ul, #hobbies ul, #music ul {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+#interests li, #hobbies li {
+    margin-bottom: 10px;
+    font-size: 1.08rem;
+    color: #3a2e4f;
+    line-height: 1.7;
+}
+
+/* Estilo para listas anidadas en interests */
+#interests ul ul {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-left: 18px;
+    font-size: 1rem;
+    color: #6d5c7b;
+}
+
+/* Párrafos en music y hobbies */
+#music p, #hobbies p {
+    color: #6d5c7b;
+    font-size: 1.08rem;
+    margin-bottom: 18px;
+}
+/*nav y nav a estilo con menu horizontal, efecto hover*/
+.navegadores nav {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.navegadores a {
+    text-decoration: none;
+    color: #444;
+    font-size: 1.08rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.navegadores a:hover {
+    background: #222;
+    color: #fff;
+}
+
+/*container estilo con limitaciones de contenido para no ocupar toda la pantalla*/
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*titulos de sección estilo de todos los h2*/
+h2 {
+    color: #271F30;
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 24px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+table th, table td {
+    padding: 14px 18px;
+    text-align: left;
+    color: #271F30;
+    font-size: 1.05rem;
+}
+
+table th {
+    background: #e8b46a;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #f3ecd9;
+}
+
+table tr {
+    transition: background 0.2s;
+}
+
+table tr:hover {
+    background: #f3ecd9;
+}
+
+table td {
+    border-bottom: 1px solid #f3ecd9;
+}
+
+table td a{
+    color: #271F30;
+}
+
+table td a:hover{
+    color: #e8b46a;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+.creaciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    justify-items: center;
+    align-items: start;
+    margin: 20px 0;
+}
+
+.creaciones > img {
+    width: 250px;      
+    max-width: 90vw;   
+    height: auto;
+    border-radius: 6px;
+    margin: 0;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: transform 0.2s;
+}
+
+.creaciones > img:hover {
+    transform: scale(1.08);
+}
+
+/*queries para hacer pantallas pequeñas, responsive*/
+@media (max-width: 800px) {
+    .creaciones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    .creaciones {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    background: #fff;
+    color: #271F30;
+    text-align: center;
+    padding: 24px 0 18px 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #444;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 1.05rem;
+    border-radius: 4px;
+    padding: 3px 8px;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+}
+
+footer a:hover {
+    background: #222;
+    color: #fff;
+}
+
+#miBoton {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background 0.2s, box-shadow 0.2s;
+    padding: 0;
+}
+
+#miBoton img {
+    width: 24px;
+    height: 24px;
+}
+
+#miBoton:hover {
+    background: #e8b46a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 600px) {
+    #miBoton {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+    #miBoton img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+#miBoton {
+    /* ...tus estilos... */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+#miBoton.visible {
+    opacity: 1;
+    pointer-events: auto;
+}

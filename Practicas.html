@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartado de prácticas</title>
+    <meta property="og:title" content="Seguimiento de prácticas">
+    <meta name="description" content="Seguimiento y apuntes de prácticas">
+    <link rel="stylesheet" href="css/stylePra.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1>Teoría aplicada de prácticas</h>
+            <div class="navegadores">
+                <nav>
+                    <a href="#Cajas">Cajas básicas</a>
+                    <a href="#Overflowing">Overflowing</a>
+                    <a href="#Positions">Hobbies</a>
+                    <a href="#Z-index">z-index</a>
+                    <a href="#Flexbox">Flex-box</a>
+                    <a href="#Grid">Grid</a>
+                    <a href="#JavaScript">JavaScript</a>
+                </nav>
+            </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Introducción</h2>
+            <p>En este apartado se encuentran los apuntes de las prácticas que he realizado en el módulo de DAW
+                bilingüe.</p>
+            <section id="Cajas">
+                <h2>Ejemplos de cajas básicas</h2>
+                <section class="escaja">
+                    <p>Esto es una caja sin texto centrado</p>
+                </section>
+                <section class="escaja2">
+                    <p>Esto es una caja con texto centrado</p>
+                </section>
+            </section>
+            <section id="Overflowing">
+                <h2>Ejemplos de overflowing</h2>
+                <section class="overflowing">
+                    <p>Esto es overflowing vissible</p>
+                </section>
+                <section class="scrollover">
+                    <p>Esto es overflowing scroll</p>
+                </section>
+                <section class="textoverflowing">
+                    <p>Esto es propiedad ellipsis</p>
+                </section>
+            </section>
+            <section id="Positions">
+                <h2>Ejemplos de la propiedad position</h2>
+                <section id="position">
+                    <div class="contenedor">
+                        <p>position absolute: determinada por las coordenadas en el documento</p>
+                    </div>
+                </section>
+                <section id="position2">
+                    <div class="contenedor2">
+                        <p>position relative: cualquiera de los elementos hijos se posicionan de forma relativa al padre
+                        </p>
+                    </div>
+                </section>
+                <section id="position3">
+                    <div class="contenedor3">
+                        <p>position fixed: coordenadas relativas a la pantalla, fija en el viewport </p>
+                    </div>
+                </section>
+                <section id="position4">
+                    <div class="contenedor4">
+                        <p>position sticky: deja su posición siempre que puede dentro del contenedor </p>
+                    </div>
+                </section>
+            </section>
+            <section id="Z-index">
+                <h2>Ejemplos de z-index y apilamiento</h2>
+                <p>El z-index es una propiedad de CSS que controla el orden de apilamiento de los elementos posicionados
+                    (con position: relative, absolute, fixed o sticky).
+                    Indica qué elemento se muestra por encima de otro cuando se superponen.</p>
+                <section id="zindex">
+                    <div class="top">1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </section>
+                <section id="zindex">
+                    <div>1</div>
+                    <div class="medium">2</div>
+                    <div>3</div>
+                </section>
+                <section id="zindex">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </section>
+            </section>
+            <section id="Flexbox">
+                <h2>FLEX BOX</h2>
+                <p>Flexbox es un modelo de diseño en CSS que facilita la distribución
+                    y alineación de elementos dentro de un contenedor, incluso cuando
+                    su tamaño es desconocido o dinámico.</p>
+                <section class="parent">
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                </section>
+                <section class="parent2">
+                    <div class="item2">1</div>
+                    <div class="item2">2</div>
+                    <div class="item2">3</div>
+                </section>
+                <section class="parent3">
+                    <div class="item3">1</div>
+                    <div class="item3">2</div>
+                    <div class="item3">3</div>
+                </section>
+                <section class="parent4">
+                    <div class="item4">1</div>
+                    <div class="item4">2</div>
+                    <div class="item4">3</div>
+                </section>
+            </section>
+            <section id="Grid">
+                <h2>GRID</h2>
+                <p>CSS Grid es un sistema de diseño bidimensional que te permite
+                    crear layouts complejos y responsivos de manera sencilla,
+                    organizando los elementos en filas y columnas.</p>
+                <section>
+                </section>
+            </section>
+            <section id="JavaScript">
+                <h2>JavaScript</h2>
+                <p>JavaScript es un lenguaje de programación esencial para el desarrollo web moderno. Permite añadir
+                    interactividad,
+                    dinamismo y funcionalidades avanzadas a las páginas web, como responder a eventos del usuario,
+                    modificar
+                    el
+                    contenido de la página en tiempo real y comunicarse con servidores. Gracias a JavaScript, las
+                    páginas
+                    web dejan
+                    de ser estáticas y se convierten en aplicaciones interactivas y atractivas para los usuarios.</p>
+                <h3>Botones</h3>
+                <section>
+                    <p>Botón que cambia el color del fondo: document.body.style.backgroundColor = "#E9C3DE"; <br> <small>(este botón no cambia el color permanentemente, recarga la página para volver al color original)</small></p>
+                    <button id="backgroundButton">
+                        Cambiar color de fondo
+                    </button>
+                    <p>Botón que te lleva al inicio de la página: window.scrollTo({ top: 0, behavior: 'smooth' });</p>
+                    <button id="go-up">
+                        Subir hacia arriba
+                    </button>
+                    <p>Botoón que abre una ventana emergente con un mensaje: alert('Hola, soy un botón');</p>
+                    <button id="alertButton">
+                        Alerta: Hola, soy un botón
+                    </button>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Noah Valentina Aguirre Laines. All rights reserved.</p>
+        <a href="mailto:noahmelocotonrancio@gmail.com">Enviame un correo</a>
+        <a href="https://instagram.com/noahlathala" target="_blank">Instagram</a>
+        <a href="https://github.com/valentinaclim5" target="_blank">GitHub</a>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
