@@ -1,0 +1,4 @@
+*.png
+*.jpeg
+*.JPG
+vientito-0.2.gif
