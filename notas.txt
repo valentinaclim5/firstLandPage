@@ -66,8 +66,8 @@ Cursos y recursos recomendados:
 - Manipulación del DOM (querySelector , innerHTML). 
  
 Cursos y recurso adicionales:
-    Jquery desde 0
-   Documentación oficial Jquery
+    Jquery desde 0 https://www.youtube.com/watch?v=DVN8NWppCN0
+   Documentación oficial Jquery https://api.jquery.com/
  
 - Ejercicio: Lista de tareas (añadir/eliminar elementos).
 
