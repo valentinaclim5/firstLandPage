@@ -1,0 +1,88 @@
+1 y 2 día ✅
+
+- Ejercicio: Crear una página "Sobre mí" con texto e imágenes. 
+ 
+📅 Lunes y Martes:
+✅ CSS Básico
+- Selectores (clases, IDs, elementos). 
+- Propiedades básicas (color, font-size, margin, padding, background). 
+-Cursos recomendados:
+     CSS desde 0
+ 
+- Ejercicio: Dar estilo a la página del lunes.  
+
+*****************************************************************************************
+
+3 día
+
+📅 Miércoles: 
+✅ CSS Flexbox y Grid 
+
+- Diseño responsive con Flexbox (display: flex, justify-content, align-items). 
+
+- Grid básico (grid-template-columns, gap).  
+
+Cursos  y recursos recomendados:
+ 
+   Flexbox CSS desde 0 <- https://www.youtube.com/watch?v=PSwlAuRbv_A&t=2726s
+   CSS Grid desde 0 <- https://www.youtube.com/watch?v=iTjkiI8QQsM
+   Juego para practicar FLEX_BOX <- https://flexboxfroggy.com/#es
+   juego practicas Grid <- https://cssgridgarden.com/#es
+
+
+*****************************************************************************************
+
+4 día
+
+📅 Jueves: 
+✅ JavaScript Intro 
+- Variables (let, const), console.log(). 
+- Eventos básicos (onclick, addEventListener). 
+Cursos y recursos recomendados:
+ 
+ Introducción a JavaScript <- https://www.youtube.com/watch?v=Z34BF9PCfYg
+ 
+- Ejercicio: Botón que cambia el color de fondo.  
+
+*****************************************************************************************
+
+5 día
+
+📅 Viernes: 
+✅ Mini-Proyecto 1: Landing Page
+ 
+- Crear una landing page sencilla con:  
+ - Header con menú.  
+ - Sección hero con botón.  
+ - Galería (Flex/Grid).  
+ - Footer.  
+
+*****************************************************************************************
+
+6 día
+📅 Lunes:
+✅ JavaScript Intermedio y JQuery
+- Funciones y condicionales (if/else). 
+- Manipulación del DOM (querySelector , innerHTML). 
+ 
+Cursos y recurso adicionales:
+    Jquery desde 0
+   Documentación oficial Jquery
+ 
+- Ejercicio: Lista de tareas (añadir/eliminar elementos).
+
+*****************************************************************************************
+
+7 día
+📅 Martes:
+✅ Responsive Design
+- Media queries (@media (max-width: 768px)). 
+- Unidades relativas (rem, %, vw/vh). 
+ 
+- Ejercicio: Hacer responsive el proyecto del viernes (Semana 1).  
+
+*****************************************************************************************
+
+8 día
+
+*****************************************************************************************
