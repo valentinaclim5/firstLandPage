@@ -1,0 +1,54 @@
+//Layout Multiple choice
+
+.multiple_choice{
+	@include span-columns(10);
+
+	.enunciado{
+		margin-bottom: 1rem;
+		line-height: 2rem;
+	}
+
+	.pregunta{
+
+	}
+
+	.listado_respuestas{
+		@include span-columns(7);
+	}
+
+	.image_container{
+	   @include span-columns(3 omega);
+	   text-align: center;
+	   margin-bottom: 3rem;
+	}
+
+	.botonera{
+		/*Botonera centrada*/
+		@include span-columns(10);
+	  	button{
+	  		margin: 0 auto;
+	  		margin-top:2rem;
+	  	}
+	  	/*SOLO PREGUNTAS COMPRENSION ESCRITA - Adaptacion libros...*/
+	  	i{
+	  		font-style: italic;
+	  		font-size: 1.3rem;
+	  		float: right;
+	  		padding: 1rem;
+	  	}
+	}
+	//mult choice raz matematico -CASAS HIPOTECAS
+	table.enunciado{
+		width:90%;
+		margin-bottom: 1rem;
+		td{
+			vertical-align: top;
+			strong{
+				display: block;
+			}
+		}
+	}	
+		.listado_respuestas.casas{
+		@include span-columns(10);
+	}
+}

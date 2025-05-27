@@ -1,0 +1,59 @@
+@import "compass/css3/transform";
+// Aqui definimos todos los meter, por colores.
+
+ @mixin meter ($color1){
+	width: 100%;
+	height: 30px;
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	border: solid 3px darken($color1,30%);
+	background-color: $white;
+	text-align: center;
+	-webkit-box-shadow: 0px 0px 30px 12px rgba(50, 50, 50, 0.1);
+	-moz-box-shadow:    0px 0px 30px 12px rgba(50, 50, 50, 0.1);
+	box-shadow:         0px 0px 30px 12px rgba(50, 50, 50, 0.1);
+
+	
+	>.meter-bar{
+		position: absolute;
+		display: block!important;
+		height: 100%;
+		width: 100%;
+		background-color: $color1;
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from($color1, to(darken($color1, 10%))));
+		background-image: -webkit-linear-gradient($color1, darken($color1, 10%));
+		background-image: -moz-linear-gradient($color1, darken($color1, 10%));
+		background-image: -o-linear-gradient($color1, darken($color1, 10%));
+		background-image: linear-gradient($color1, darken($color1, 10%)); 
+	}
+
+	>.candy{
+		/*display: block;
+		height: 100%;
+		width: 100%;
+		background-image: url("../img/large/candy.png");
+		background-repeat: repeat-x;
+		@include skew(-45deg, 0deg);*/
+	}
+	>.text_value{
+		opacity: 0;
+		padding-top: 0.5rem;
+    	position: absolute;
+    	font-weight: bold;
+    	z-index: 1;
+    	/*color: darken($color1,40%);*/
+    	color: $black;
+    	/*display: inline-block;
+    	width: 100%;*/
+    	width:100%;
+    	left: 0;
+    	&:before{
+    		content:"% de progreso: ";
+    	}
+	}
+	
+}
+.modulo_0 .meter{
+	background-color: $white;
+}

@@ -1,0 +1,12 @@
+form{
+	position:relative;
+	z-index: 150;
+
+	&.multiple_choice{
+
+		.listado_respuestas{
+			@extend .listado_respuestas;
+		}
+
+	}
+}

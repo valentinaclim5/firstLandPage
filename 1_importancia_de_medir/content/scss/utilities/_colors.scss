@@ -1,0 +1,86 @@
+//COLORES
+
+$white: #FFF; //Color blanco
+$white_blue: #d3dfea;
+$white_blue2: #edf7ff;
+$black: black;  //Colo negro -> ahora será gris
+$color_principal: #313131;
+$grey: #666666; // Gris;
+$grey_light: #F2F2F2; //Gris claro;
+$grey_border: #bebebe;
+$grey_border2: #cecece;
+$grey_ejemplo:#969696;
+$grey_fondo: #f8f8f8;
+$grey_oscuro: #5a5a5a;
+$morado: #a100ff;
+$morado_hover: #460073;
+$morado_out_hover: #7500c0;
+$correcto: #008500;
+$error: #E60000;
+$red: #e30119; //Rojo;
+$blue: #3FA8F4; //azul; 2ebaff
+$dark_blue: #093459; //azul marino 196582
+
+//$dark_grey: #232323; // Gris oscuro
+$dark_grey: $black;
+$green: #04776E;
+$green_light: #37eec7;
+$green_light2: #b4f8ae;
+$red_light: #f5d2cc;
+$amarillo: #dcb146;
+//colores accesibles
+$blue_a1:#5D6DD8;
+$azul_acc:#2800FF;
+$azul_sabias: #008eff; //azul marino 196582
+//COLORIZACION POR ELEMENTOS
+$morado_sabias:#7C00C5;
+$color_lineas_separacion: #D6D6D6; 
+
+//Colores de los modulos. 
+
+//Cada modulo tiene dos colores y a partir de ellos se realizar el degradado de bandas y colores.
+$color_modulo_0_light: #bd0054;
+$color_modulo_0_dark: #bd0054; 
+
+$color_modulo_1_light: #3b6993;
+$color_modulo_1_dark: #094377;  
+
+$color_modulo_2_light: #f15a24; 
+$color_modulo_2_dark: #f15a24;
+
+$color_modulo_3_light: #d29400;
+$color_modulo_3_dark: #d29400;
+
+$color_modulo_4_light: #009245;
+$color_modulo_4_dark: #009245;
+
+$color_modulo_5_light: #00a99d;
+$color_modulo_5_dark: #00a99d;
+
+$color_modulo_6_light: #2e3192;
+$color_modulo_6_dark:  #2e3192;
+
+$color_modulo_7_light: #bd0054;
+$color_modulo_7_dark: #bd0054;
+
+$color_modulo_8_light: lighten(#c16b40,20%);
+$color_modulo_8_dark: lighten(#9b320d,30%);
+
+$color_modulo_9_light: lighten(#efd75e,1%);
+$color_modulo_9_dark:  lighten(#c6af28,30%);
+
+$color_modulo_10_light: lighten(#6d8ebf,4.5%);
+$color_modulo_10_dark: lighten(#244272,25%);
+
+$color_modulo_11_dark: #3bbbaa;
+$color_modulo_11_light: lighten($color_modulo_11_dark,25%);
+
+$color_modulo_12_light: #E2DCAA;
+$color_modulo_12_dark: lighten(#9b8d1a, 25%);
+
+$color_modulo_13_dark: #f15f2b;
+$color_modulo_13_light: lighten($color_modulo_13_dark,25%);
+
+$color_disabled_1: #cccccc;
+$color_disabled_2: #999999;
+

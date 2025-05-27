@@ -1,0 +1,340 @@
+﻿{
+	"course": {
+		"courseTitle": "La importancia de los KPI",
+		"content_path": "cont/",
+		"id": "1",
+		"hasSCORM": "0",
+		"hasAudio": "0",
+		"hasNotes": "0",
+		"contents": [
+			{
+				"title": "Inicio",
+				"id": "0",
+				"available": "0",
+				"type": "inicio",
+				"competence": "Inicio",
+				"hasmenu":"1",
+				"disabl": "0",
+				"pages": [		
+					{
+						"id": "",
+						"src": "im_1_00.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+						"hp": "1"
+					}					
+				]
+			},
+			{
+				"title": "1.1. Introducción a la importancia de medir",
+				"id": "1",
+				"available": "1",
+				"type": "text",
+				"competence": "Tema1",
+				"disabl": "0",
+				"hasmenu":"1",
+				"pages": [
+					{
+						"id": "",
+						"src": "im_1_01.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0"
+					},
+					{
+						"id": "",
+						"src": "im_1_02.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nxt": "1"
+					}
+				]
+			},
+			{
+				"title": "1.2. Introducción a los KPI",
+				"id": "2",
+				"available": "1",
+				"type": "multimedia",
+				"competence": "Tema2",
+				"disabl": "0",
+				"hasmenu":"1",
+				"pages": [
+					{
+						"id": "",
+						"src": "im_1_03.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+						"nxt": "1",
+				    	"video": "0"	
+					}
+				]
+			},	
+			{
+				"title": "1.3. Distinguir los KPI de otras métricas",
+				"id": "3",
+				"available": "1",
+				"type": "text",
+				"competence": "Tema3",
+				"disabl": "0",
+				"hasmenu":"1",
+				"pages": [
+					{
+						"id": "",
+						"src": "im_1_04.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0"
+						
+					},
+					{
+						"id": "",
+						"src": "im_1_05.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0"
+						
+					},
+					{
+						"id": "",
+						"src": "im_1_06.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0"
+						
+					},
+					{
+						"id": "",
+						"src": "im_1_07.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+                        "nxt": "1"				
+					}
+				]
+			},
+			{
+				"title": "1.4. Ejercicio: Relaciona métrica con KPI",
+				"id": "4",
+				"available": "1",
+				"type": "interaction",
+				"competence": "Tema4",
+				"disabl": "0",
+				"hasmenu":"1",
+				"pages": [
+					{
+						"id": "",
+						"src": "im_1_08.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+                        "hasPreg": "1",
+                        "type-preg": "sc",
+                        "nxt": "1"
+					},
+					{
+						"id": "",
+						"src": "im_1_09.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+                        "hasPreg": "1",
+                        "type-preg": "sc",
+                        "nxt": "1"
+					},
+					{
+						"id": "",
+						"src": "im_1_10.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+                        "hasPreg": "1",
+                        "type-preg": "sc",
+                        "nxt": "1"
+					}
+				]
+			},
+			{
+				"title": "1.5. Ejercicio: Encuentra el KPI",
+				"id": "5",
+				"available": "1",
+				"type": "interaction",
+				"competence": "Tema5",
+				"disabl": "0",
+				"hasmenu":"1",
+				"pages": [
+					{
+						"id": "",
+						"src": "im_1_11.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+                        "hasPreg": "1",
+                        "type-preg": "sc",
+                        "nxt": "1"
+					},
+					{
+						"id": "",
+						"src": "im_1_12.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+                        "hasPreg": "1",
+                        "type-preg": "sc",
+                        "nxt": "1"
+					},
+					{
+						"id": "",
+						"src": "im_1_13.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+                        "hasPreg": "1",
+                        "type-preg": "sc",
+						"nxt": "1"
+					}
+				]
+			},
+			{
+				"title": "1.6. SMART",
+				"id": "6",
+				"available": "1",
+				"type": "text",
+				"competence": "Tema6",
+				"disabl": "0",
+				"hasmenu":"1",
+				"pages": [
+					{
+						"id": "",
+						"src": "im_1_14.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0"
+						
+					},
+					{
+						"id": "",
+						"src": "im_1_15.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+                        "nxt": "1"
+					},
+					{
+						"id": "",
+						"src": "im_1_16.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nxt": "1"
+						
+					}
+				]
+			},
+			{
+				"title": "1.7. Ejercicio: Practica el método SMART",
+				"id": "7",
+				"available": "1",
+				"type": "interaction",
+				"competence": "Tema7",
+				"disabl": "0",
+				"hasmenu":"1",
+				"pages": [
+					{
+						"id": "",
+						"src": "im_1_17.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+                        "hasPreg": "1",
+                        "type-preg": "sc",
+                        "nxt": "1"
+					},
+					{
+						"id": "",
+						"src": "im_1_18.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+                        "hasPreg": "1",
+                        "type-preg": "sc",
+                        "nxt": "1"
+					},
+					{
+						"id": "",
+						"src": "im_1_19.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+                        "hasPreg": "1",
+                        "type-preg": "sc",
+                        "nxt": "1"
+					},
+					{
+						"id": "",
+						"src": "im_1_20.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+                        "hasPreg": "1",
+                        "type-preg": "sc",
+                        "nxt": "1"
+					},
+					{
+						"id": "",
+						"src": "im_1_21.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"nomenu": "0",
+                        "hasPreg": "1",
+                        "type-preg": "sc",
+                        "nxt": "1"
+					}
+				]
+			},
+			{
+				"title": "1.8. Ventajas de los KPI",
+				"id": "8",
+				"available": "1",
+				"type": "text",
+				"competence": "Tema8",
+				"disabl": "0",
+				"hasmenu":"1",
+				"pages": [
+					{
+						"id": "",
+						"src": "im_1_22.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0"
+						
+					},
+					{
+						"id": "",
+						"src": "im_1_23.html",
+						"available": "1",
+						"rasgo": "intro",
+						"random": "0",
+						"hn": "1"
+						
+					}
+				]
+			}
+		]
+	}
+}

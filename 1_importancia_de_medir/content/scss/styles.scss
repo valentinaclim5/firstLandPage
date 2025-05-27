@@ -1,0 +1,79 @@
+//Importacion de todas las hojas de estilo.
+@import "compass";
+
+$total-columns: 10;
+$column-width: 8.7rem;
+$gutter-width: 1rem;    
+$grid-padding: 0; 
+$container-style: magic; // default to magic. Switch to fluid or fixed if desired
+
+
+//Utilities@ 
+@import "utilities/colors";
+@import "utilities/reset";
+@import "utilities/normalize";
+@import "utilities/clearfix";
+@import "utilities/gradients";
+@import "utilities/fonts"; 
+@import "utilities/mixins";
+@import "vendor/susyone";
+@import "utilities/modals"; 
+
+//Atoms
+
+@import "atoms/buttons";
+@import "atoms/dropdowns";
+@import "atoms/icons";
+@import "atoms/images";
+@import "atoms/inputs";
+@import "atoms/links";
+@import "atoms/lists";
+@import "atoms/paragraphs";
+@import "atoms/selects";
+@import "atoms/tables";
+@import "atoms/typo_headers";
+@import "atoms/effects";
+@import "atoms/containers"; 
+@import "atoms/tooltips";
+
+//Molecules
+
+@import "molecules/menus";
+@import "molecules/progress_bar";
+@import "molecules/adornos";
+
+
+//organisms
+
+@import "organisms/footers";
+@import "organisms/headers";
+@import "organisms/side_menu";
+@import "organisms/top_menu";
+@import "organisms/forms";
+
+//pages
+
+@import "pages/main_layout";
+@import "pages/fill_the_gap";
+@import "pages/lista_compra";
+@import "pages/multiple_choice";
+@import "pages/true_or_false";
+@import "pages/bienvenida";
+@import "pages/help";
+@import "pages/audio_multchoice";
+@import "pages/com_no_verbal";
+@import "pages/series";
+@import "pages/prioridad";
+@import "pages/checkbox";
+@import "pages/fin";
+@import "pages/drag_drop";
+
+//Themes - Responsive Design
+@import "themes/modulos";
+@import "themes/responsive";
+@import "themes/_responsive_mobile";
+@import "themes/_responsive_mobile_vertical";
+@import "themes/_responsive_tablet";
+
+//MS IE 9-10-11
+@import "styles_ie9"

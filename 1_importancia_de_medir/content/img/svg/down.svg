@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="14.000165"
+   height="7.0003276"
+   viewBox="0 0 14.000165 7.0003276"
+   version="1.1"
+   id="svg14"
+   sodipodi:docname="down.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview16"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="-31.440348"
+     inkscape:cy="11.635665"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g12" />
+  <defs
+     id="defs3">
+    <path
+       id="prefix__a"
+       d="m 8.732,-2.64 c 0.353,-0.424 0.984,-0.482 1.408,-0.128 0.392,0.326 0.47,0.889 0.203,1.307 L 10.268,-1.36 5.802,4 10.268,9.36 c 0.327,0.391 0.303,0.959 -0.036,1.322 L 10.14,10.768 C 9.749,11.095 9.181,11.071 8.818,10.732 l -0.086,-0.092 -5,-6 C 3.451,4.303 3.425,3.827 3.655,3.465 L 3.732,3.36 Z"
+       inkscape:connector-curvature="0" />
+  </defs>
+  <g
+     transform="translate(2.5634621e-4,-0.49974365)"
+     id="g12"
+     style="display:inline;fill:none;fill-rule:evenodd">
+    <mask
+       id="prefix__b"
+       fill="#fff">
+      <use
+         xlink:href="#prefix__a"
+         id="use5"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+    </mask>
+    <use
+       transform="matrix(0,-1,-1,0,11,11)"
+       xlink:href="#prefix__a"
+       id="use8"
+       style="display:inline;fill:#7500c0;fill-opacity:1;fill-rule:nonzero"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </g>
+</svg>

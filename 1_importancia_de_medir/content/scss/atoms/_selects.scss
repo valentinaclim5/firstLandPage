@@ -1,0 +1,19 @@
+select{ 
+    font-family: $fuente_curso_1;
+    font-size: 1.4rem;
+    border: solid 1px rgb(117, 0, 192);
+    /*background-color: #fce8ec;*/		
+    -webkit-appearance: none;  /*Removes default chrome and safari style*/
+    -moz-appearance: none; /* Removes Default Firefox style*/
+    background: url('../img/svg/select_arrow_morado.svg') no-repeat;  /*Adds background-image*/
+    background-position: 97% 0px;  /*Position of the background-image*/
+    background-size: 20px 100%;
+    width: 100%; /*Width of select dropdown to give space for arrow image*/
+    text-indent: 0.01px; /* Removes default arrow from firefox*/
+    text-overflow: ellipsis;/*Removes default arrow from firefox*/   
+    padding-right: 3rem;
+}
+
+select::-ms-expand {
+	display: none; 
+}

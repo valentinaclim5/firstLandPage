@@ -1,0 +1,23 @@
+@import "compass";
+
+html{
+	font-size: 62.5%;
+}
+
+*, *:before, *:after{
+	@include box-sizing(border-box);
+}
+
+span, p, div, li{
+	font-size: 1.4rem;
+	/*color: $dark_blue;*/
+	color: $color_principal;
+}
+a{
+	font-size: 1.4rem;	
+}
+i{
+	font-style: italic;
+	font-size: 1.3rem;
+	margin-top: 1rem;
+}

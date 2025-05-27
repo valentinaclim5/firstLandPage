@@ -1,0 +1,40 @@
+.pagin_fin{
+	@include span-columns(10);
+
+	.enunciado{
+		 @include span-columns(9);
+	}
+
+	.image_container{
+	   text-align: center;
+	   margin-bottom: 3rem;
+	}
+
+	.menu_nav.pagina_fin{
+		text-align: center;
+
+			div.texto_fin_mod{
+					float: left;
+	    			width: 100%;
+	    			padding:0;
+				}
+	}
+	header{
+			text-align: right;
+			p{
+				float: left;
+				font-size: 1.4rem;
+		    	margin-left: 4rem;
+		    	margin-top: 1rem;
+		    	color: white!important;
+		    	font-family: $fuente_curso_1;
+			}
+	}
+
+	.pop_up_fin_texto{
+		margin: 2rem;
+		h4{
+			color:$dark_grey !important;
+		}	
+	}
+}

@@ -1,0 +1,166 @@
+@import "compass";
+
+
+@mixin gradienteModulo($modulo:"modulo_1", $direccion:"horizontal"){
+	$color1:();
+	$color2:();
+
+	@if $modulo == "modulo_1" {
+		$color1:  $color_modulo_1_light;
+		$color2:  $color_modulo_1_dark;
+	}@else if $modulo == "modulo_2" {
+		$color1:  $color_modulo_2_light;
+		$color2:  $color_modulo_2_dark;		
+	}@else if $modulo == "modulo_3" {
+		$color1:  $color_modulo_3_light;
+		$color2:  $color_modulo_3_dark;		
+	}@else if $modulo == "modulo_4" {
+		$color1:  $color_modulo_4_light;
+		$color2:  $color_modulo_4_dark;		
+	}@else if $modulo == "modulo_5" {
+		$color1:  $color_modulo_5_light;
+		$color2:  $color_modulo_5_dark;		
+	}@else if $modulo == "modulo_6" {
+		$color1:  $color_modulo_6_light;
+		$color2:  $color_modulo_6_dark;		
+	}@else if $modulo == "modulo_7" {
+		$color1:  $color_modulo_7_light;
+		$color2:  $color_modulo_7_dark;		
+	}@else if $modulo == "modulo_8" {
+		$color1:  $color_modulo_8_light;
+		$color2:  $color_modulo_8_dark;		
+	}@else if $modulo == "modulo_9" {
+		$color1:  $color_modulo_9_light;
+		$color2:  $color_modulo_9_dark;		
+	}@else if $modulo == "modulo_10" {
+		$color1:  $color_modulo_10_light;
+		$color2:  $color_modulo_10_dark;		
+	}@else if $modulo == "modulo_11" {
+		$color1:  $color_modulo_11_light;
+		$color2:  $color_modulo_11_dark;		
+	}@else if $modulo == "modulo_12" {
+		$color1:  $color_modulo_12_light;
+		$color2:  $color_modulo_12_dark;		
+	}@else if $modulo == "modulo_13" {
+		$color1:  $color_modulo_13_light;
+		$color2:  $color_modulo_13_dark;		
+	}@else if $modulo == "disabled" {
+		$color1:  $color_disabled_1;
+		$color2:  $color_disabled_2;
+	}
+
+	@if $direccion == "horizontal" {
+		/**modificamos el color1 solo para accesibilidad***/
+		$color1: darken($color1,45%);
+		$color2: darken($color2,35%);
+		background-color: $color1;
+		@include filter-gradient($color1, $color2, horizontal);
+		$experimental-support-for-svg: true;
+		@include background-image(linear-gradient(left, $color1 0%,$color2 100%));
+	}@else if $direccion == "vertical" {
+		background-color: $color1;
+		@include filter-gradient($color1, $color2, vertical);
+		$experimental-support-for-svg: true;
+		@include background-image(linear-gradient(top, $color1 0%,$color2 100%));
+	}
+}
+
+@mixin gradienteMenu($modulo:"modulo_1"){
+	$color1:();
+	$color2:();
+
+	@if $modulo == "modulo_1" {
+		$color1: rgba($color_modulo_1_light, 0);
+		$color2: $color_modulo_1_dark;
+	}@else if $modulo == "modulo_2" {
+		$color1: rgba($color_modulo_2_light, 0);
+		$color2: $color_modulo_2_dark;		
+	}@else if $modulo == "modulo_3" {
+		$color1: rgba($color_modulo_3_light, 0);
+		$color2: $color_modulo_3_dark;		
+	}@else if $modulo == "modulo_4" {
+		$color1: rgba($color_modulo_4_light, 0);
+		$color2: $color_modulo_4_dark;		
+	}@else if $modulo == "modulo_5" {
+		$color1: rgba($color_modulo_5_light, 0);
+		$color2: $color_modulo_5_dark;		
+	}@else if $modulo == "modulo_6" {
+		$color1: rgba($color_modulo_6_light, 0);
+		$color2: $color_modulo_6_dark;		
+	}@else if $modulo == "modulo_7" {
+		$color1: rgba($color_modulo_7_light, 0);
+		$color2: $color_modulo_7_dark;		
+	}@else if $modulo == "modulo_8" {
+		$color1: rgba($color_modulo_8_light, 0);
+		$color2: $color_modulo_8_dark;		
+	}@else if $modulo == "modulo_9" {
+		$color1: rgba($color_modulo_9_light, 0);
+		$color2: $color_modulo_9_dark;		
+	}@else if $modulo == "modulo_10" {
+		$color1: rgba($color_modulo_10_light, 0);
+		$color2: $color_modulo_10_dark;
+	}@else if $modulo == "modulo_11" {
+		$color1: rgba($color_modulo_11_light, 0);
+		$color2: $color_modulo_11_dark;
+	}@else if $modulo == "modulo_12" {
+		$color1: rgba($color_modulo_12_light, 0);
+		$color2: $color_modulo_12_dark;
+	}@else if $modulo == "modulo_13" {
+		$color1: rgba($color_modulo_13_light, 0);
+		$color2: $color_modulo_13_dark;
+	}@else if $modulo == "disabled" {
+		$color1: rgba($color_disabled_1, 0);
+		$color2: darken($color_disabled_2,40%);
+	}
+
+
+		@include filter-gradient($color1, $color2, horizontal);
+		$experimental-support-for-svg: true;
+		@include background-image(linear-gradient(left, $color1 70%,darken($color2,30%) 100%));
+}
+
+%gradiente_cabecera{
+	/*background-color: rgb(27,117,187);*/
+	background-color: rgb(20,87,138);
+	@include filter-gradient(#1b75bb, #89c5de, horizontal);
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(left, $dark_blue 10%,rgba(0,176,216,1) 35%,#89c5de 100%));
+}
+
+%gradiente_footer{
+	background-color: rgb(255,255,255);
+	@include filter-gradient(#ffffff, #d5d6d8, vertical);
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(top, rgba(255,255,255,1) 0%,rgba(213,214,216,1) 100%));
+}
+
+%gradiente_button{
+	background-color: #d5d6d8;
+	/*@include filter-gradient( #d5d6d8, #ffffff, vertical);
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(top, rgba(213,214,216,1) 0%,rgba(255,255,255,1) 100%));*/
+}
+
+%gradiente_button2{
+	background-color: #d5d6d8;
+	@include filter-gradient( #ffffff,#d5d6d8 , vertical);
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(top, rgba(255,255,255,1) 0%,rgba(213,214,216,1) 100%));
+}
+
+
+%gradiente_html{
+	background-color: rgb(223,237,247);
+	@include filter-gradient(#50a4db, #A6CDE9, horizontal);
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(left, rgba(123,181,223,0.43) 0%,rgba(223,237,247,0.43) 100%));
+	
+}
+
+%gradiente_cabecera_popups{
+	background-color: rgb(80,164,219);
+	@include filter-gradient($blue, $blue, horizontal);
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(left, rgba($blue,1) 0%,rgba($blue,0) 100%));
+}
+

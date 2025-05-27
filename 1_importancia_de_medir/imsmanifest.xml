@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<manifest identifier="PPD_SP" version="1.2" 
+	xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" 
+		xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                        http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                        http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+	<schema>ADL SCORM</schema>
+	<schemaversion>1.2</schemaversion>
+		<lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" >
+				<general>
+					<title>
+						<langstring>Emprendimiento</langstring>
+					</title>
+					<catalogentry>
+						<catalog></catalog>
+						<entry><langstring xml:lang="en"></langstring></entry>
+					</catalogentry>
+					<description>
+						<langstring xml:lang="en"></langstring>
+					</description>
+					<keyword>
+						<langstring xml:lang="en"></langstring>
+					</keyword>
+				</general>
+				<lifecycle/>
+				<metametadata>
+					<metadatascheme>LOM-1.0</metadatascheme>
+				</metametadata>
+				<technical>
+					<format>texto/html</format>
+				</technical>
+				<educational>
+					<typicallearningtime>
+						<datetime></datetime>
+					</typicallearningtime>
+				</educational>
+				<rights>
+					<cost>
+						<source>
+							<langstring xml:lang="x-none">LOM-WD6.1</langstring>
+						</source>
+						<value>
+							<langstring xml:lang="x-none">no</langstring>
+						</value>
+					</cost>
+					<copyrightandotherrestrictions>
+						<source>
+							<langstring xml:lang="x-none">LOM-WD6.1</langstring>
+						</source>
+						<value>
+							<langstring xml:lang="x-none">no</langstring>
+						</value>
+					</copyrightandotherrestrictions>
+					<description>
+						<langstring xml:lang="en"></langstring>
+					</description>
+				</rights>
+				<classification>
+					<purpose>
+						<source>
+							<langstring xml:lang="x-none">LOM-WD6.1</langstring>
+						</source>
+						<value>
+							<langstring xml:lang="x-none">Objetivo de formación</langstring>
+						</value>
+					</purpose>
+					<description>
+						<langstring xml:lang="en"></langstring>
+					</description>
+					<keyword>
+						<langstring xml:lang="en"></langstring>
+					</keyword>
+				</classification>
+		</lom>
+  </metadata>
+  <organizations default="ORG-E82D9CF88844F89BDC903899130E9DFF">
+    <organization identifier="ORG-E82D9CF88844F89BDC903899130E9DFF" structure="hierarchical">
+      <title>Emprendimiento</title>
+      <item identifier="ITEM-9A315CC45AEFB56284639D1C4D6390EE" identifierref="RES-FE95CF1D9CC951A2A400FC49538E0B11" isvisible="true">
+        <title>La importancia de los KPI</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-FE95CF1D9CC951A2A400FC49538E0B11" type="webcontent" href="content/index_es.html" adlcp:scormtype="sco">
+      <file href="content/js/APIWrapper.js" />
+      <file href="content/js/medidorTiempo.js" />
+      <file href="content/js/courseReader.js" />
+      <file href="content/index_es.html" />
+    </resource>
+  </resources>
+</manifest>
+

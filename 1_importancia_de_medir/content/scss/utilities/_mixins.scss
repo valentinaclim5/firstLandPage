@@ -1,0 +1,312 @@
+//REM TO PX FALLBACK //
+
+@function parseInt($n) { /* 2 */
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values, $isImportant:false) {
+  $px : (); /* 3 */
+  $rem: (); /* 3 */
+  
+  @each $value in $values { /* 4 */
+   
+    @if $value == 0 or $value == auto { /* 5 */
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+    
+    @else { 
+      $unit: unit($value);    /* 6 */
+      $val: parseInt($value); /* 6 */
+      
+      @if $unit == "px" {  /* 7 */
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / 16 + rem));
+      }
+      
+      @if $unit == "rem" { /* 7 */
+        $px : append($px,  ($val * 16 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  $imp:();
+
+  @if($isImportant){
+    $px: append($px, !important);
+    $rem: append($rem, !important);
+  } 
+  @if $px == $rem {     /* 8 */
+    #{$property}: $px;  /* 9 */
+  } @else {
+    #{$property}: $px;  /* 9 */
+    #{$property}: $rem; /* 9 */
+  }
+}
+
+//Usage @include rem(font-size, 1.6rem);
+
+
+
+/////////////////////////////
+////Breakpoints
+////////////////////////////
+
+$movil:"movil";
+$movilv :"movilv";
+$movilh :"movilh";
+$tablet :"tablet";
+$tabletphoneh: "tabletphoneh";
+$tabletphonev: "tabletphonev";
+$tableth: "tableth";
+$tabletv: "tabletv";
+$desktop: "desktop";
+$desktopwide: "desktopwide";
+$desktopwidest: "desktopwidest";
+$retina: "retina";
+
+
+//Breakpoint mixxin
+@mixin breakpoint($point) {
+  @if $point == $movil{
+    @media only screen and (min-width : 480px) and (max-width : /*480px*/ 767px) { @content; }
+  }
+  @else if $point == $movilh{
+    @media only screen and (min-width : 321px)  { @content; }
+  }
+  @else if $point == $movilv{
+    @media only screen and (max-width : /*320px*/ 479px)   { @content; }
+  }
+  @else if $point == $tablet{
+    @media only screen and (min-width : 768px) and (max-width : 1024px)  { @content; }
+  }
+  @else if $point == $tabletv{
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)  { @content; }
+  }
+  @else if $point == $tableth {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)   { @content; }
+  }
+  @else if $point == $desktop {
+    @media only screen and (min-width : 1224px)  { @content; }
+  }
+  @else if $point == $desktopwide {
+    @media only screen and (min-width : 1824px)  { @content; }
+  }
+  @else if $point == $retina {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio : 2)  { @content; }
+  }
+}
+
+
+/*
+Uso  
+.sidebar {
+  width: 60%
+  float: left;
+  margin: 0 2% 0 0;
+  @include breakpoint($tableth) {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}*/
+
+
+
+////////////////////////////////////////
+// SVG background + retina fallback
+// Requiere
+// * imagen.svg
+// * imagen.png
+// * imagen@2x.png (El doble de grande que la anterior)
+////////////////////////////////////////
+
+
+$image-path: '../img' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+@mixin background-image($name, $size:false){
+    background-image: url(#{$image-path}/#{$name}.svg);
+    @if($size){
+        background-size: $size;
+    }
+    .no-svg &{
+        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+
+        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+        }
+    }
+}
+
+/*
+Uso  
+body {
+  @include background-image('pattern');
+}
+*/
+
+
+/////////////////////////////7
+// Animaciones CSS
+//////////////////////////////
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }  
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }  
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+/*
+
+Uso   
+
+@include keyframes(slide-down) {
+  0% { opacity: 1; }
+  90% { opacity: 0; }
+}
+
+.element {
+  width: 100px;
+  height: 100px;
+  background: black;
+  @include animation('slide-down 5s 3');
+}
+
+*/
+
+//////////////////////////////////77
+// VISUALLY HIDDEN
+///////////////////////////////////
+
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+
+///////////////////////////
+// Vertical align  IE9 +
+///////////////////////////
+
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin vendor($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+/**
+PLACEHOLDER
+**/
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@function getColor($modulo){
+  @if $modulo == "modulo_0" {
+    @return $color_modulo_0_dark;
+  }@else if $modulo == "modulo_0_1" {
+    @return $color_modulo_0_light;
+  }@else if $modulo == "modulo_1" {
+    @return $color_modulo_1_dark;
+  }@else if $modulo == "modulo_1_1" {
+    @return $color_modulo_1_light;
+  }@else if $modulo == "modulo_2" {
+    @return $color_modulo_2_light;
+  }@else if $modulo == "modulo_2_2" {
+    @return $color_modulo_2_dark;
+  }@else if$modulo == "modulo_3" {
+    @return $color_modulo_3_light; 
+  }@else if$modulo == "modulo_3_3" {
+    @return $color_modulo_3_dark;
+  }@else if $modulo == "modulo_4" {
+     @return $color_modulo_4_light; 
+  }@else if $modulo == "modulo_4_4" {
+     @return $color_modulo_4_dark;
+  }@else if $modulo == "modulo_5" {
+        @return $color_modulo_5_light;
+  }@else if $modulo == "modulo_5_5" {
+        @return $color_modulo_5_dark;
+  }@else if $modulo == "modulo_6" {
+         @return $color_modulo_6_light;
+  }@else if $modulo == "modulo_6_6" {
+         @return $color_modulo_6_dark;
+  }@else if $modulo == "modulo_7" {
+        @return $color_modulo_7_light;
+  }@else if $modulo == "modulo_7_7" {
+        @return $color_modulo_7_dark;
+  }@else if $modulo == "modulo_8" {
+        @return $color_modulo_8_light;
+  }@else if $modulo == "modulo_8_8" {
+        @return $color_modulo_8_dark;
+  }@else if $modulo == "modulo_9" {
+        @return $color_modulo_9_light;
+  }@else if $modulo == "modulo_9_9" {
+        @return $color_modulo_9_dark;
+  }@else if $modulo == "modulo_10" {
+        @return $color_modulo_10_light;
+  }@else if $modulo == "modulo_10_10" {
+        @return $color_modulo_10_dark;
+  }@else if $modulo == "modulo_11" {
+        @return $color_modulo_11_light;
+  }@else if $modulo == "modulo_11_11" {
+        @return $color_modulo_11_dark;
+  }@else if $modulo == "modulo_12" {
+        @return $color_modulo_12_light;
+  }@else if $modulo == "modulo_12_12" {
+        @return $color_modulo_12_dark;
+  }@else if $modulo == "modulo_13" {
+        @return $color_modulo_13_light;
+  }@else if $modulo == "modulo_13_13" {
+        @return $color_modulo_13_dark;
+  }      
+}

@@ -1,0 +1,78 @@
+//Layout lista de la compra
+
+.series{
+	@include span-columns(10);
+
+	.listas_container{
+		@include span-columns(10);
+
+		.lista{
+			@include span-columns(10);
+			padding: 1rem;
+			border-bottom: 1px solid $color_modulo_5_dark;
+			/*input[type="radio"] + label span {
+				margin-right: 3px;
+			}*/
+		}
+
+		ul{
+			@include span-columns(6 omega);
+			@extend .listado_respuestas;
+			margin-top: 1rem;
+		}
+		h4{
+			@include span-columns(4);
+			/*color: $color_modulo_5_dark;*/
+			font-size: 2.2rem;
+			font-family: $fuente_curso_1;
+			margin-bottom: 1.5rem;
+		}
+		li{
+			margin-bottom: 0.8rem !important;
+			overflow: visible;
+			min-width: 15%;
+			float: left;
+			div{
+				width: auto !important;
+			}
+			label{
+				margin-right: 0.5rem;
+			}
+		}
+	}
+
+	.image_container{
+		   @include span-columns(3 omega);
+		   text-align: center;
+		   margin-bottom: 3rem;
+	}
+
+	.botonera{
+		//Botonera alineada a la derecha con la imagen
+		@include span-columns(10);
+	  	button{
+	  		margin: 0 auto;
+	  		margin-top: 3rem;
+	  	}
+	 }
+
+}
+
+@for $i from 1 through 10{	
+
+	@if $i==1 or $i==3 or $i==5 or $i==7 or $i==9
+	{				
+		p.serie#{$i}{
+			display: inline;
+			font-size: 2.8rem;
+			/*color: darken(getColor("modulo_#{$i}"),10%);*/
+		}
+	}
+	@else{
+		p.serie#{$i}{
+			display: inline;
+			font-size: 2rem;
+			/*color: darken(getColor("modulo_#{$i}"),10%);*/
+		}
+	}
+}

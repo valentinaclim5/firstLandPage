@@ -1,0 +1,152 @@
+/***********RESPONSIVE DESIGN TABLET MAS DE 768 PX HASTA 1024PX**********************************************************************************************/
+@include breakpoint($tablet){ //FROM Mixins
+
+	/*INCLUIMOS los contenidos para la version mobile*/
+
+	/*TAMAÑO DE FUENTE A NIVEL CURSO*/
+	html{
+		font-size: 58.5%;
+	}
+
+	/*CONTAINER DEL CURSO*/
+	#mainContent{	
+		@include span-columns(10);
+	}	
+
+	.main_header{
+		h1{
+			font-size: 2.8rem;
+		}
+		.controls{
+			@include span-columns(2 omega);
+		}
+	}
+	.menu_container{
+		@include span-columns(10);
+		position: relative;
+	}
+	.navigation_menu{
+		padding-top: 0;
+		margin: 0;
+	}
+	.menu_nav{
+		li{
+			button{
+				width: 100%;
+				padding: 0;
+			}
+			.panel-body {
+				padding: 0;
+				min-height: 18em;
+			}
+			.panel-collapse{
+				margin-top: -2rem;
+
+				.momen_collap{
+					width: 18em;
+				}
+
+				.submenu{
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+	.subbanner {
+		.copyright{
+			@include span-columns(2.7 omega);
+			margin-right: 1rem;
+		}
+	}
+
+	/*********BIENVENIDA*****/
+	.bienvenida {
+		/*********PORTADA*****/
+		.portada{
+			width: 100%;
+			.portada_title{
+				font-size: 2.2rem;
+				line-height: 3rem;
+			}
+			.portada_subtitle{
+				font-size: 1.6rem;
+				line-height: 2rem;
+			}
+		}
+		.drop_hueco{
+			.enunciado4.resp, .enunciado5.resp{
+				@include span-columns(6 omega);
+				text-align: center;
+			}
+		}
+		.drag_pieza {
+			height: 7.2rem;
+		}
+		.enunciado5.caja_contenido {
+			width: 100%;
+		}
+		.pipeta1_portada{
+			background-size: 60%;
+			height: 420px;
+		}
+
+		.juego_parejas{
+			.juego_elem{
+				min-height: 14em;
+			}
+		}
+		.resp_flex_wrap {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.linea_vertical{
+			border: none;
+		}
+		.linea_vertical_left{
+			border: none;
+		}
+		.resp_t_3{
+			@include span-columns(3);
+		}
+		.resp_t_4{
+			@include span-columns(4);
+		}
+		.resp_t_6{
+			@include span-columns(6);
+		}
+		.resp_t{
+			@include span-columns(10);
+		}
+		.resp{
+			@include span-columns(10);
+		} 
+		.margin_t{
+			margin-left: 20rem;
+		}
+		.rotate_m{
+			transform: rotate(90deg);
+			width: 15% !important;
+		}
+		.rotate_rd{
+			transform: rotate(90deg);
+			width: 5% !important;
+		}
+		.linea_vertical{
+			border: none;
+		}
+		.margin_left_5{
+			margin-left: 0rem;
+		}
+		.margin_t{
+			margin-left: 3rem;
+		}
+		.visibility{
+			visibility: visible
+		}
+		.visibility_t{
+			visibility: hidden;
+		}
+	}
+}
+
+

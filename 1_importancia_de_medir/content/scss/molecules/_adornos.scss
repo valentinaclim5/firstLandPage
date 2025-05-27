@@ -1,0 +1,28 @@
+.solapa{
+		display: block;
+		height: 3.7rem;
+		position: relative;
+		margin-top: 0;
+}
+
+.raya_superior{
+	position: relative;
+	border-right: solid 1.5rem $white;
+	//Rectangulo superior
+	&:before{
+		width: 1.5rem;
+		height: 1.5rem;
+		content:"";
+		position: absolute;
+		top: -1.5rem;
+		right: 0;
+	}
+}
+
+.anillas{
+	height: 35px;
+	background-image: url(../img/svg/anilla.svg);
+	background-repeat: repeat-x;
+	position: absolute;
+	top: 1.5rem;
+}

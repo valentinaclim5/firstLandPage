@@ -1,0 +1,285 @@
+/***********funcion CON LOS CONTENIDOS DEL RESPONSIVE DESIGN MOBILE que se 
+reutiliza para las otras resoluciones, movilv y movilh
+************************************************************************/
+@mixin responsiveclass{
+	/*TAMAÑO DE FUENTE A NIVEL CURSO*/
+	html{
+		font-size: 52%;
+	}
+
+	/*CONTAINER DEL CURSO*/
+	#mainContainer{	
+	}
+
+	.main_header{
+		h1{
+			font-size: 2.2rem;
+		}
+		.controls{
+			@include span-columns(3 omega);
+		}
+	}
+	#mainFooter{
+		.footerControls{
+			button{
+				width: 11em;
+				height: 3em;
+				margin-left: 0;
+			}
+			#prev{
+				background-position-x: 1rem;
+			}
+			#next{
+				background-position-x: 11.5rem;
+			}
+		}
+		.footerLinks{
+			.ancho_links{
+				div{
+					padding-left: 1rem;
+					padding-right: 1rem;
+					text-align: center;
+				}
+			}
+		}
+		.subfooter{
+			.subfoo {
+				width: 100%;
+				.item{
+					.item_folder{
+						.folder_cont{
+							width: 10%;
+							.folder{
+								width: 3.5rem;
+							}
+						}
+						.folder_text{
+							width: 90%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/*********************************************MENU**************************************************/
+	.menu_container{
+		@include span-columns(10);
+		height: auto;
+		top: 6.1rem;
+		margin-bottom: 0.5rem;
+		position: absolute;
+	}
+	.navigation_menu{
+		@include span-columns(10);
+		float: none;
+		padding-top: 1rem;
+		margin-bottom: 1rem;
+		margin-right: 1rem;
+		
+		&.opened{
+			top: 0;
+		}
+		ul{
+			button{
+				height: 3.2em;
+			}
+			.trayecto{
+				height: 3.2rem;
+    			top: -1.21rem;
+    			left: 1.9rem;
+			}
+		}
+	}
+	
+	.menu_opener{
+		display:block;
+		@include span-columns(2);
+	    margin-left: 0;
+	    margin-top: 0;
+	    margin-bottom: 0.5rem;
+	    z-index: none;
+	    padding: 0;
+	    padding-left: 5rem;
+		height: 3.5rem;
+		&:hover{
+			cursor: pointer;
+			&:before{
+				margin-right: 1rem;
+	    		width: 25px;
+	    		height: 16px;
+	    		position: absolute;	
+			}
+		}
+		&:before{
+			content: url(../img/svg/menu_icono.svg);
+			margin-right: 1rem;
+    		width: 25px;
+    		height: 16px;
+    		position: absolute;
+		}
+	}
+
+	.menu_nav{
+		.panel-group{
+			transform: none!important;
+			@include span-columns(10);
+		}
+		.panel-group .panel{
+		  @include span-columns(10);
+		}
+		button{
+			height: auto;
+			margin-left: 0;
+			width: 100%;
+			font-size: 1.5rem;
+			transform: none !important;
+		}
+		.panel-body {
+		    display: none;
+		}
+
+		li{
+			@for $i from 0 through 7{
+				&[data-mod="#{$i}"]{	
+					.panel-heading button{
+						border-bottom: 1px solid $white_blue;
+						div.logomenu{
+							width: 3em;
+							height: 3em;
+							float: left;
+						}
+						div.logomenu_text{
+							display: block;
+							color: $white_blue;
+							@include span-columns(7);
+							font-size: 1.8rem;
+							padding-top: 1rem;
+							padding-left: 1rem;
+							text-align: left;
+							height: auto;
+						}
+						&:hover{
+							div.logomenu_text{
+								color: $white;
+							}
+						}
+					}	
+				}
+			}
+		}
+	}
+	
+	#mainContent{	
+		@include span-columns(10);
+		margin-bottom: 0.5rem;
+	}
+	/**********FOOTER*******/
+	.main_footer{
+		.footerControls{
+			margin-top: 0.5rem;
+		}
+	}
+
+	/*********BIENVENIDA*****/
+	.bienvenida {
+		.resp{
+			@include span-columns(10);
+
+		}
+		.sabias_que{
+			width: 100%;
+		} 
+		#capaacierto,#capafallo{
+		  padding: 2rem;
+	    }
+		.linea_vertical{
+			//display: none;
+		}
+		.image_container_1{
+			width: 125% !important; 
+		}
+		.mr_resp{
+			margin-right: 0% !important;
+		}
+		.linea_vertical_left{
+			border: none;
+		}
+		.drop_hueco {
+			text-align: center;
+		}
+		a, span, p, div, li{
+			line-height: 2rem;
+		}
+		.resp_5{
+			@include span-columns(5);
+		}
+		.resp_4{
+			@include span-columns(4);
+		}
+		.resp_3{
+			@include span-columns(3);
+		}
+		
+		/*********PORTADA*****/
+		.portada{
+			.overlay{
+				margin-top: 9rem;
+				padding-top: 3rem;
+				.portada_title{
+					font-size: 3rem;
+					line-height: 4rem;
+					margin-bottom: 1rem;
+				}
+				.portada_subtitle{
+					font-size: 2rem;
+					line-height: 3rem;
+					margin-bottom: 1rem;
+				}
+			}
+		}
+		.portada_contenido{
+			padding-top: 2.2rem;
+			padding-bottom: 2.2rem;
+		}
+
+		.test_fondo{
+			background:url("../img/svg/test_fondo_movil.svg") no-repeat;
+			background-size: 50%;
+			height: 420px;
+
+			.texto_muy_grande{
+				font-size: 3.5rem;
+			}
+			.texto_grande{
+				font-size: 2.5rem;
+			}
+		}
+
+		.juego_parejas{
+			.juego_elem{
+				width: 47%;
+			}
+		}
+
+		.resp_flex_wrap {
+			display: flex;
+			flex-wrap: wrap; 
+		}
+		.resp_flex_center {
+			display: flex;
+			justify-content: center;
+		}
+		.drag_img{
+			height: 1rem;
+		}
+	}
+
+	//CLASE PARA NO MOSTRAR INPUTS Y LABELS
+	.sin_estilo_check{
+
+		.enunciado19{
+			width: 35%;
+		}
+	}
+}

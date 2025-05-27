@@ -1,0 +1,61 @@
+ul{
+	
+}
+
+li{
+
+}
+
+.lista_horizontal{
+	li{
+		display: inline-block;
+	}
+}
+
+.lista_vertical{
+	li{
+		display: block;
+	}
+}
+
+.listado_respuestas{
+	@extend .elements_column;
+		li{
+		 	@include clearfix;
+		}
+}
+
+
+
+/*
+* Define un row de elementos eliminando  el margen derecho e izquierdo para facilitar el posterior centrado.
+*/
+.elements_row{
+	@extend .lista_horizontal; //From lists
+
+	   li{	   	
+
+	        &:first-of-type{ /** TODO. Cuando metamos el selectivizr, podremos quitar fristlogo y lastlogo **/
+	            margin-left: 0;
+	        }
+
+	        &:last-of-type{
+	            margin-right: 0;
+	        }
+	    }
+}
+
+.elements_column{
+	@extend .lista_vertical; //From lists
+
+	li{
+		&:first-of-type{
+			margin-top: 0;
+		}
+
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+}
+

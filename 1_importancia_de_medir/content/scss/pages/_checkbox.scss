@@ -1,0 +1,40 @@
+//Layout Checkbox
+
+.checkbox{
+	@include span-columns(10);
+
+	.enunciado{
+		margin-bottom: 3rem;
+	}
+
+	.checkbox_pregs{
+		@include span-columns(6);
+	}
+
+	.image_container{
+	   @include span-columns(3 omega);
+	   text-align: center;
+	   margin-bottom: 3rem;
+	}
+
+	.botonera{
+		/*Botonera centrada*/
+		@include span-columns(10);
+	  	button{
+	  		margin: 0 auto;
+	  		margin-top:2rem;
+	  		margin-bottom: 2rem;
+	  	}
+	}
+	label{
+	    display: inline-block;
+	    line-height: 150%;
+	    float: left;
+	    padding-bottom: 1.5rem;
+  	}
+
+	 label span{
+	    float: left;
+	    height: 100%;
+	 } 
+}

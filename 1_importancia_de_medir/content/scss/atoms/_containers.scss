@@ -1,0 +1,57 @@
+%grey_container{
+	background-color: #e4e9eb;
+	@include filter-gradient(#f2f2f3, #e0e0e2, vertical);
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(top, #f2f2f3 0%,#e0e0e2 100%));
+}
+%white_container{
+	background-color: $white;
+	/*@include filter-gradient(#f2f2f3, #e0e0e2, vertical);
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(top, #f2f2f3 0%,#e0e0e2 100%));*/
+}
+
+.content_container{
+	min-height: auto;
+	background-color: transparent;
+	z-index: 0;
+	position: relative;
+	margin-left: -0.1rem;
+}
+
+.bloc_container{
+	background-color: #e3ebed;
+	border: solid 1px #27a8e0;
+	margin-top: 3rem;
+	margin-bottom: 1.5rem;
+}
+
+.menu_container{
+	@include span-columns(10);
+	height: auto;
+	top: 2.7rem;
+	margin-bottom: 0.5rem;
+	position: absolute;
+	position: relative;
+	/*visibility: hidden;*/
+	display: none;
+	z-index: 1;
+	margin-left: -0.1rem;
+	&.opened{
+		visibility: visible;
+	}
+	.menu_tit {
+		font-family: $fuente_curso_light;
+		font-size: 1.6rem;
+		font-weight: 300;
+		line-height: 0.94;
+		margin-bottom: 1rem;
+	}
+	.menu_sub_tit {
+		font-size: 1.4rem;
+		font-weight: 600;
+		line-height: 1.29;
+		margin-bottom: 1rem;
+	}
+}
+
