@@ -289,6 +289,46 @@ footer {
   display: block;
   margin: 0 auto;
 }
+#miBoton {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: background 0.2s, box-shadow 0.2s;
+    padding: 0;
+}
+
+#miBoton img {
+    width: 24px;
+    height: 24px;
+}
+
+#miBoton:hover {
+    background: #e8b46a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+#miBoton {
+    /* ...tus estilos... */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+#miBoton.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
 
 @media screen and (max-width: 400px) {
   .overlay p {
