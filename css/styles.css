@@ -1,3 +1,4 @@
+
 /*nav y nav a estilo con menu horizontal, efecto hover*/
 .navbar {
   padding: 2rem;
@@ -6,7 +7,7 @@
 
 .navbar-collapse {
   align-items: center;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
 /* Estilos generales */
@@ -24,13 +25,13 @@ h1 {
 }
 
 .seccion-oscura {
-  color: white;
-  background-color: #e8b46a;
+  color: #584e4e;
+  background-color: #B6E1E7;
 }
 
 .seccion-clara {
-  color: black;
-  background-color: white;
+  color: #2d2d2d;
+  background-color: #f5f6f7;
 }
 
 .seccion-titulo {
@@ -81,7 +82,7 @@ h1 {
 
 .hero-principal h2 {
   font-size: 1.5rem;
-  color: #615151;
+  color: #878787;
 }
 
 /* Sobre mi */
@@ -102,9 +103,13 @@ h1 {
   padding: 40px 40px 60px 40px;
 }
 
+.columna p {
+  color: #584e4e;
+}
+
 .experiencia .columna {
   padding: 20px;
-  border: 2px solid #8080804d;
+  border: 2px solid #B6E1E7;/*F9B872*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,14 +118,14 @@ h1 {
 }
 
 .experiencia .columna:hover {
-  color: white;
-  background-color: #1b1b32;
+  color: #584e4e;
+  background-color: #FAE7A5;
 }
 
 .experiencia i {
   font-size: 2.5rem;
-  color: #7ade30;
-  background-color: #0a0a23;
+  color: #56c1cf;
+  background-color: #f5f6f7;
   padding: 8px 19px;
   border-radius: 50%;
 }
@@ -191,10 +196,12 @@ h1 {
 
 .overlay .iconos-contenedor {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay i {
-  color: black;
+  color: #6ac0ca;
   font-size: 60px;
   margin: 10px;
 }
@@ -216,112 +223,6 @@ h1 {
   font-weight: bold;
 }
 
-/* Testimonios */
-
-.testimonios {
-  padding: 40px 40px 80px 40px;
-}
-
-.testimonios .carousel {
-  max-width: 800px;
-}
-
-.carousel-item {
-  height: 500px;
-}
-
-.carousel-item .container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.testimonio-imagen {
-  height: 150px;
-  width: 150px;
-  margin: 10px 10px 20px 10px;
-}
-
-.testimonio-texto {
-  max-width: 70%;
-  font-size: 20px;
-  text-align: center;
-  font-family: 'Share Tech Mono', monospace;
-}
-
-.testimonio-info {
-  font-weight: bold;
-  text-align: center;
-}
-
-.testimonio-info p {
-  margin-bottom: 0;
-}
-
-.testimonio-footer .cliente {
-  font-size: 1.2rem;
-}
-
-.testimonio-info .cargo {
-  font-size: 0.9rem;
-  color: #656060;
-}
-
-/* Contacto */
-
-.contacto .container {
-  max-width: 1100px;
-  min-height: 200px;
-  padding: 20px;
-}
-
-.contacto .rectangulo {
-  margin-top: -5rem;
-  background-color: rgb(13, 110, 253);
-  border-radius: 10px;
-  box-shadow: 0px 1px 4px 1px white;
-}
-
-.contacto .row {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.contacto .descripcion {
-  color: white;
-  font-size: 1.2rem;
-}
-
-.contacto button {
-  color: white;
-  font-weight: bold;
-  background-color: transparent;
-  border: 2px solid white;
-  padding: 1.25em 2em;
-  margin: 10px;
-  border-radius: 100px;
-  transition: all 0.2s ease-in-out;
-}
-
-.contacto button:hover {
-  background-color: white;
-  color: black;
-}
-
-.contacto button i {
-  color: white;
-  font-size: 1.3rem;
-  transition: all 0.2s ease-in-out;
-}
-
-.contacto button:hover i {
-  color: black;
-}
-
 /* Pie de pagina (footer) */
 
 footer {
@@ -329,9 +230,9 @@ footer {
 }
 
 .footer-logo {
-  height: 80px;
-  width: 80px;
-  margin: 10px;
+  display: block;
+  margin: 0 auto 10px auto;
+  max-width: 80px;
 }
 
 .footer-texto {
@@ -362,17 +263,23 @@ footer {
 
 .iconos-redes-sociales a:hover {
   background-color: white;
-  border: 2px solid rgb(13, 110, 253);
+  border: 2px solid #FAE7A5;
 }
 
 .iconos-redes-sociales a:hover i {
-  color: black;
+  color: #F9B872;
 }
 
 .derechos-de-autor {
   font-size: 15px;
-  color: #aeaeae;
+  color: #ffffff;
   padding: 20px;
+}
+
+.Accenture {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 400px) {
@@ -402,8 +309,10 @@ footer {
   }
 }
 
+
 @media screen and (min-width: 700px) {
-  .hero-inferior-imagen {
-    max-width: 600px;
-  }
+    .hero-inferior-imagen {
+        max-width: 600px;
+    }
 }
+
