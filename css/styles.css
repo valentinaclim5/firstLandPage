@@ -282,6 +282,14 @@ footer {
   margin-top: 20px;
 }
 
+.hero-inferior-imagen {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 400px) {
   .overlay p {
     font-size: 18px;
@@ -298,21 +306,9 @@ footer {
   }
 }
 
-@media screen and (max-width: 800px) {
-  .testimonio-imagen {
-    height: 120px;
-    width: 120px;
-  }
-
-  .testimonio-texto {
-    font-size: 18px;
-  }
-}
-
-
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 576px) {
     .hero-inferior-imagen {
-        max-width: 600px;
+        max-width: 90vw;
     }
 }
 
