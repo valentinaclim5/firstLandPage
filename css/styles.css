@@ -289,14 +289,15 @@ footer {
   display: block;
   margin: 0 auto;
 }
+
 #miBoton {
     position: fixed;
     bottom: 32px;
     right: 32px;
-    width: 48px;
-    height: 48px;
-    background: #ffffff;
-    border: none;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid white;
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     cursor: pointer;
@@ -304,30 +305,27 @@ footer {
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    transition: background 0.2s, box-shadow 0.2s;
+    transition: background 0.2s, box-shadow 0.2s, border 0.2s, opacity 0.3s;
     padding: 0;
-}
-
-#miBoton img {
-    width: 24px;
-    height: 24px;
-}
-
-#miBoton:hover {
-    background: #e8b46a;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-}
-
-#miBoton {
-    /* ...tus estilos... */
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s;
 }
 
 #miBoton.visible {
     opacity: 1;
     pointer-events: auto;
+}
+#miBoton i {
+    color: #56c1cf;
+    font-size: 1.5rem;
+    transition: color 0.2s;
+}
+#miBoton:hover {
+    background: white;
+    border: 2px solid #FAE7A5;
+}
+#miBoton:hover i {
+    color: #F9B872;
 }
 
 @media screen and (max-width: 400px) {
