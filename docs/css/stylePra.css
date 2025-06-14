@@ -17,7 +17,7 @@ header {
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-.navegadores nav {
+.navegadores nav  {
     display: flex;
     justify-content: center;
     gap: 28px;
